@@ -39,7 +39,7 @@ export const metadata = {
   ],
   authors: [{ name: "Titan Project Solutions" }],
   creator: "Titan Project Solutions",
-  metadataBase: new URL("https://titanprojectsolutions.com"),
+  metadataBase: new URL("https://titan-project.netlify.app"),
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
