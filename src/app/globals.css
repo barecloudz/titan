@@ -59,3 +59,10 @@ html {
     padding-bottom: 6rem;
   }
 }
+
+@media print {
+  body { background: white !important; color: black !important; }
+  header, nav, button, a[href]:not([href^="tel"]) { display: none !important; }
+  #quote-print { border: none !important; border-radius: 0 !important; }
+  #quote-print * { color: black !important; background: white !important; border-color: #C9A84C !important; }
+}

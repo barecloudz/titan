@@ -22,11 +22,26 @@ export default function ContactForm() {
     const form = e.target;
     const data = new FormData(form);
 
-    fetch("/__forms.html", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(data).toString(),
-    })
+    const payload = {
+      name: data.get("name"),
+      phone: data.get("phone"),
+      email: data.get("email"),
+      service: data.get("service"),
+      message: data.get("message"),
+    };
+
+    Promise.all([
+      fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data).toString(),
+      }),
+      fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }),
+    ])
       .then(() => setSubmitted(true))
       .catch((err) => console.error(err));
   }

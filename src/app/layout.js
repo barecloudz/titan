@@ -1,8 +1,5 @@
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import MobileCallBar from "@/components/MobileCallBar";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -75,10 +72,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
       <body className="bg-[#111111] text-white" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-        <Header />
-        <main className="pb-[60px] sm:pb-0">{children}</main>
-        <Footer />
-        <MobileCallBar />
+        {children}
       </body>
     </html>
   );
