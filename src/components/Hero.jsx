@@ -22,12 +22,23 @@ export default function Hero() {
       />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-full px-4 py-1.5 mb-8">
-          <span className="w-2 h-2 rounded-full bg-[#C9A84C] animate-pulse" />
-          <span className="text-[#C9A84C] text-xs font-semibold uppercase tracking-widest">
-            Massapequa, NY - Licensed &amp; Insured
-          </span>
+        {/* Badges */}
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+          <div className="inline-flex items-center gap-2 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-full px-4 py-1.5">
+            <span className="w-2 h-2 rounded-full bg-[#C9A84C] animate-pulse" />
+            <span className="text-[#C9A84C] text-xs font-semibold uppercase tracking-widest">
+              Massapequa, NY - Licensed &amp; Insured
+            </span>
+          </div>
+          <div className="inline-flex items-center gap-2 bg-[#C9A84C] rounded-full px-4 py-1.5">
+            <svg className="w-3.5 h-3.5 text-black" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+              <path fillRule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clipRule="evenodd" />
+            </svg>
+            <span className="text-black text-xs font-black uppercase tracking-widest">
+              Financing Available
+            </span>
+          </div>
         </div>
 
         {/* H1 */}
