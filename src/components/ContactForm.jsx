@@ -22,7 +22,7 @@ export default function ContactForm() {
     const form = e.target;
     const data = new FormData(form);
 
-    fetch("/netlify-forms.html", {
+    fetch("/__forms.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(data).toString(),
