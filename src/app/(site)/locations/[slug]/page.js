@@ -1,7 +1,10 @@
 import { locations } from "@/data/locations";
 import CTABanner from "@/components/CTABanner";
+import JsonLd from "@/components/JsonLd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+
+const BASE = "https://titanprojectsolutions.com";
 
 export async function generateStaticParams() {
   return locations.map((loc) => ({ slug: loc.slug }));
@@ -12,16 +15,17 @@ export async function generateMetadata({ params }) {
   const location = locations.find((l) => l.slug === slug);
   if (!location) return {};
 
+  const url = `${BASE}/locations/${location.slug}`;
   return {
     title: `Roofing Contractor in ${location.name}, NY | Titan Project Solutions`,
     description: `Titan Project Solutions is the trusted roofing contractor serving ${location.name}, NY. We also offer siding, kitchens, bathrooms, pavers, and more. Licensed & insured. Free estimates. Call 516-557-4933.`,
-    keywords: [
-      `roofing contractor ${location.name} NY`,
-      `roofing company ${location.name}`,
-      `contractor ${location.name} NY`,
-      `roof replacement ${location.name}`,
-      `siding ${location.name} NY`,
-    ],
+    alternates: { canonical: url },
+    openGraph: {
+      url,
+      title: `Roofing Contractor in ${location.name}, NY | Titan Project Solutions`,
+      description: `Trusted roofing and construction services in ${location.name}, NY. Licensed & insured. Free estimates. Call 516-557-4933.`,
+      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: `Roofing contractor ${location.name} NY` }],
+    },
   };
 }
 
@@ -48,8 +52,38 @@ export default async function LocationPage({ params }) {
     .filter((l) => l.county === location.county && l.slug !== slug)
     .slice(0, 6);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Locations", item: `${BASE}/locations/massapequa` },
+      { "@type": "ListItem", position: 3, name: location.name, item: `${BASE}/locations/${location.slug}` },
+    ],
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "@id": `https://titanprojectsolutions.com/#business`,
+    name: "Titan Project Solutions",
+    url: BASE,
+    telephone: "+15165574933",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Massapequa",
+      addressRegion: "NY",
+      postalCode: "11758",
+      addressCountry: "US",
+    },
+    areaServed: { "@type": "City", name: location.name, containedInPlace: { "@type": "State", name: "New York" } },
+    description: `Roofing contractor serving ${location.name}, NY. Roofing, siding, kitchens, bathrooms, pavers & more.`,
+  };
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={localBusinessSchema} />
       {/* Hero */}
       <section className="bg-[#0a0a0a] py-24 px-4 sm:px-6 lg:px-8 border-b border-[#C9A84C]/10">
         <div className="max-w-4xl mx-auto">

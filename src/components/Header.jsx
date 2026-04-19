@@ -81,6 +81,9 @@ export default function Header() {
             <Link href="/about" className="text-gray-300 hover:text-[#C9A84C] text-sm font-medium tracking-wide uppercase transition-colors">
               About
             </Link>
+            <Link href="/financing" className="text-gray-300 hover:text-[#C9A84C] text-sm font-medium tracking-wide uppercase transition-colors">
+              Financing
+            </Link>
             <Link href="/contact" className="text-gray-300 hover:text-[#C9A84C] text-sm font-medium tracking-wide uppercase transition-colors">
               Contact
             </Link>
@@ -160,6 +163,9 @@ export default function Header() {
             </Link>
             <Link href="/about" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-300 hover:text-[#C9A84C] font-medium uppercase tracking-wide text-sm">
               About
+            </Link>
+            <Link href="/financing" onClick={() => setMobileOpen(false)} className="block py-2 text-[#C9A84C] hover:text-[#E8C96A] font-bold uppercase tracking-wide text-sm">
+              Financing Available
             </Link>
             <Link href="/contact" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-300 hover:text-[#C9A84C] font-medium uppercase tracking-wide text-sm">
               Contact

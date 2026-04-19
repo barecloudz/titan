@@ -79,4 +79,14 @@ export const services = [
     icon: "demolition",
     featured: false,
   },
+  {
+    slug: "excavation",
+    name: "Excavation & Drainage",
+    shortDesc:
+      "Residential excavation, French drains, dry wells, and yard drainage solutions across Nassau County and Long Island.",
+    fullDesc:
+      "Titan Project Solutions operates excavators for residential excavation, site grading, and drainage work throughout Nassau County and Long Island. We install French drains, dry wells, and custom drainage systems to solve chronic water and flooding issues. From minor grading to full excavation for foundations and utilities, our equipment and crew handle it all.",
+    icon: "excavation",
+    featured: false,
+  },
 ];

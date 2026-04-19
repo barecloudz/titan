@@ -30,7 +30,7 @@ export default function Hero() {
               Massapequa, NY - Licensed &amp; Insured
             </span>
           </div>
-          <div className="inline-flex items-center gap-2 bg-[#C9A84C] rounded-full px-4 py-1.5">
+          <Link href="/financing" className="inline-flex items-center gap-2 bg-[#C9A84C] hover:bg-[#E8C96A] transition-colors rounded-full px-4 py-1.5">
             <svg className="w-3.5 h-3.5 text-black" fill="currentColor" viewBox="0 0 20 20">
               <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
               <path fillRule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clipRule="evenodd" />
@@ -38,7 +38,7 @@ export default function Hero() {
             <span className="text-black text-xs font-black uppercase tracking-widest">
               Financing Available
             </span>
-          </div>
+          </Link>
         </div>
 
         {/* H1 */}

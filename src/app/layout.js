@@ -22,21 +22,9 @@ export const metadata = {
   },
   description:
     "Titan Project Solutions is Nassau County's #1 roofing contractor. Licensed & insured. Serving Massapequa, Long Island, and surrounding areas. Free estimates. Call 516-557-4933.",
-  keywords: [
-    "roofing contractor Nassau County",
-    "roofing company Long Island",
-    "roof replacement Massapequa",
-    "siding contractor Nassau County",
-    "kitchen remodeling Long Island",
-    "bathroom renovation Nassau County",
-    "pavers Long Island",
-    "dumpster rental Nassau County",
-    "demolition Long Island",
-    "construction company Massapequa NY",
-  ],
   authors: [{ name: "Titan Project Solutions" }],
   creator: "Titan Project Solutions",
-  metadataBase: new URL("https://titan-project.netlify.app"),
+  metadataBase: new URL("https://titanprojectsolutions.com"),
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
