@@ -1,0 +1,174 @@
+"use client";
+
+import { useState } from "react";
+
+const situationOptions = [
+  "Cabinets delivered but not installed",
+  "Installation started but not finished",
+  "Materials ordered but never delivered",
+  "Paid in full — work hasn't started",
+];
+
+export default function WrenRescueForm() {
+  const [submitted, setSubmitted] = useState(false);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    const payload = {
+      name: data.get("name"),
+      phone: data.get("phone"),
+      email: data.get("email"),
+      service: "Wren Kitchen Rescue",
+      message: `Situation: ${data.get("situation")}\n\n${data.get("description")}`,
+    };
+
+    Promise.all([
+      fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "wren-rescue",
+          name: payload.name || "",
+          phone: payload.phone || "",
+          email: payload.email || "",
+          situation: data.get("situation") || "",
+          description: data.get("description") || "",
+        }).toString(),
+      }),
+      fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }),
+    ])
+      .then(() => setSubmitted(true))
+      .catch((err) => console.error(err));
+  }
+
+  if (submitted) {
+    return (
+      <div className="bg-[#1a1a1a] border border-[#C9A84C]/30 rounded-lg p-10 text-center">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#C9A84C]/10 border border-[#C9A84C]/30 mb-5">
+          <svg className="w-8 h-8 text-[#C9A84C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h3
+          className="text-2xl font-black text-white uppercase tracking-wide mb-3"
+          style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}
+        >
+          We Got You.
+        </h3>
+        <p className="text-gray-400 mb-4">
+          We&apos;ll call you within 2 hours to schedule your free job site assessment.
+        </p>
+        <p className="text-gray-500 text-sm">
+          Need to reach us right now?{" "}
+          <a href="tel:5165574933" className="text-[#C9A84C] font-semibold hover:text-[#E8C96A]">
+            Call 516-557-4933
+          </a>
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form
+      name="wren-rescue"
+      method="POST"
+      data-netlify="true"
+      onSubmit={handleSubmit}
+      className="bg-[#1a1a1a] border border-white/10 rounded-lg p-8 space-y-5"
+    >
+      <input type="hidden" name="form-name" value="wren-rescue" />
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
+            Full Name *
+          </label>
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="John Smith"
+            className="w-full bg-[#111111] border border-white/10 rounded text-white placeholder-gray-600 px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] transition-colors"
+          />
+        </div>
+        <div>
+          <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
+            Phone Number *
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            required
+            placeholder="(516) 555-0100"
+            className="w-full bg-[#111111] border border-white/10 rounded text-white placeholder-gray-600 px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] transition-colors"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
+          Email Address
+        </label>
+        <input
+          type="email"
+          name="email"
+          placeholder="you@example.com"
+          className="w-full bg-[#111111] border border-white/10 rounded text-white placeholder-gray-600 px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] transition-colors"
+        />
+      </div>
+
+      <div>
+        <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
+          Your Situation *
+        </label>
+        <select
+          name="situation"
+          required
+          className="w-full bg-[#111111] border border-white/10 rounded text-white px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] transition-colors appearance-none"
+        >
+          <option value="">Select your situation...</option>
+          {situationOptions.map((s) => (
+            <option key={s} value={s} className="text-white bg-[#1a1a1a]">
+              {s}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
+          Tell Us More
+        </label>
+        <textarea
+          name="description"
+          rows={4}
+          placeholder="Where are things at? What was completed, what's still missing, any specific concerns..."
+          className="w-full bg-[#111111] border border-white/10 rounded text-white placeholder-gray-600 px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] transition-colors resize-none"
+        />
+      </div>
+
+      <button
+        type="submit"
+        className="w-full bg-[#C9A84C] hover:bg-[#E8C96A] text-black font-black text-sm py-4 rounded uppercase tracking-widest transition-colors"
+        style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}
+      >
+        Get My Free Assessment
+      </button>
+
+      <p className="text-gray-600 text-xs text-center">
+        Or call us directly at{" "}
+        <a href="tel:5165574933" className="text-[#C9A84C] hover:text-[#E8C96A]">
+          516-557-4933
+        </a>
+        . We respond within 2 hours.
+      </p>
+    </form>
+  );
+}

@@ -71,6 +71,16 @@ export default function KitchensPage() {
             <p>A kitchen remodel is one of the highest-ROI projects a homeowner can undertake - but only when it&apos;s done well. Subpar workmanship, misaligned cabinets, or sloppy tile work can actually hurt your home&apos;s value.</p>
             <p>Titan Project Solutions manages every phase of your kitchen renovation in-house. We handle the demo, framing changes, plumbing, electrical, cabinetry installation, countertop fabrication coordination, flooring, and all finish work. You won&apos;t be stuck chasing five different contractors.</p>
             <p>We work closely with each homeowner to understand their vision, their budget, and their timeline - then we execute it. Every kitchen we complete in Nassau County is one we&apos;re proud to put our name on.</p>
+            <div className="mt-6 border border-[#C9A84C]/30 bg-[#C9A84C]/5 rounded-lg p-5">
+              <p className="text-[#C9A84C] text-xs font-bold uppercase tracking-widest mb-1">Notice for Wren Kitchens Customers</p>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                If you were affected by the recent{" "}
+                <Link href="/wren-kitchens-rescue" className="text-[#C9A84C] hover:text-[#E8C96A] font-semibold underline">
+                  Wren Kitchens closure
+                </Link>
+                , see our dedicated rescue program. We complete unfinished installations, source missing materials, and take over stalled projects across Nassau and Suffolk Counties.
+              </p>
+            </div>
           </div>
         </div>
       </section>

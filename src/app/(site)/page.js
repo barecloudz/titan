@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Link from "next/link";
 import FinancingStrip from "@/components/FinancingStrip";
 import Stats from "@/components/Stats";
 import ServiceGrid from "@/components/ServiceGrid";
@@ -69,6 +70,29 @@ export default function HomePage() {
     <>
       <JsonLd data={localBusinessSchema} />
       <Hero />
+      {/* Wren Kitchens urgency banner */}
+      <Link
+        href="/wren-kitchens-rescue"
+        className="block bg-[#1a1a1a] border-y border-[#C9A84C]/30 hover:bg-[#222] transition-colors group"
+      >
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <span className="flex-shrink-0 bg-red-600 text-white text-xs font-black uppercase tracking-widest px-2 py-1 rounded">
+              Alert
+            </span>
+            <p className="text-white text-sm font-semibold" style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}>
+              Stranded by Wren Kitchens?{" "}
+              <span className="text-[#C9A84C]">We can finish your kitchen.</span>
+            </p>
+          </div>
+          <span
+            className="text-[#C9A84C] text-xs font-black uppercase tracking-widest group-hover:text-[#E8C96A] flex items-center gap-1 flex-shrink-0"
+            style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}
+          >
+            Free Assessment →
+          </span>
+        </div>
+      </Link>
       <FinancingStrip />
       <Stats />
       <ServiceGrid />
