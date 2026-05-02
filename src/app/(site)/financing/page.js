@@ -85,7 +85,7 @@ export default function FinancingPage() {
               Apply Online Now
             </button>
           </form>
-          <p className="text-gray-600 text-xs mt-4">Takes minutes - won't affect your credit to check rates</p>
+          <p className="text-gray-600 text-xs mt-4">Takes minutes to apply. Flexible plans available.</p>
         </div>
       </section>
 
