@@ -4,6 +4,18 @@ export const metadata = {
   title: "Financing Available | Titan Project Solutions",
   description:
     "Finance your roofing, siding, kitchen, or home renovation project with Titan Project Solutions. Flexible payment options including 0% interest plans. Apply online in minutes.",
+  openGraph: {
+    title: "Financing Available | Titan Project Solutions",
+    description: "Flexible financing for roofing, kitchens, siding & more. 0% interest plans available. Apply online in minutes through our financing partner.",
+    url: "https://titanprojectsolutions.com/financing",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Financing Available | Titan Project Solutions",
+    description: "Flexible financing for roofing, kitchens, siding & more. 0% interest plans available. Apply online in minutes.",
+  },
+  alternates: { canonical: "https://titanprojectsolutions.com/financing" },
 };
 
 const plans = [
@@ -202,7 +214,18 @@ export default function FinancingPage() {
         <a href="tel:5165574933" className="text-[#C9A84C] font-black text-xl hover:text-[#E8C96A] transition-colors">
           Call 516-557-4933
         </a>
-        <p className="text-gray-600 text-xs mt-2">We'll walk you through the best plan for your project.</p>
+        <p className="text-gray-600 text-xs mt-2">We&apos;ll walk you through the best plan for your project.</p>
+      </section>
+
+      {/* Legal Disclaimer */}
+      <section className="bg-[#0a0a0a] border-t border-white/5 py-8 px-4">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-gray-600 text-xs leading-relaxed">
+            <strong className="text-gray-500">Financing Disclosure:</strong> Financing is offered through Service Finance Company, LLC, a Truist Bank subsidiary, and is subject to credit approval. Applying for financing will result in a hard inquiry on your credit report. Advertised rates and promotional terms are subject to change without notice and may not be available to all applicants. A credit score and other factors determine eligibility and actual APR. Deferred interest plans require minimum monthly payments; if the full promotional balance is not paid by the end of the promotional period, interest will be charged from the original purchase date. Titan Project Solutions is not a lender and does not make credit decisions. See{" "}
+            <a href="https://www.svcfin.com" className="text-gray-500 hover:text-gray-400 underline" target="_blank" rel="noopener noreferrer">svcfin.com</a>{" "}
+            for complete terms, conditions, and disclosures.
+          </p>
+        </div>
       </section>
     </>
   );

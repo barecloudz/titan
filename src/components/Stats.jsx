@@ -2,7 +2,7 @@ const stats = [
   { number: "500+", label: "Projects Completed", desc: "Across Nassau & Suffolk County" },
   { number: "10+", label: "Years Experience", desc: "Serving Long Island homeowners" },
   { number: "30+", label: "Towns Served", desc: "Nassau & Western Suffolk" },
-  { number: "5★", label: "Rated", desc: "By our Long Island clients" },
+  { number: "5★", label: "Rated", desc: "By our clients on Google" },
 ];
 
 export default function Stats() {

@@ -10,6 +10,18 @@ export const metadata = {
     "roofing estimate Long Island",
     "contractor contact Massapequa NY",
   ],
+  alternates: { canonical: "https://titanprojectsolutions.com/contact" },
+  openGraph: {
+    title: "Contact Titan Project Solutions | Free Estimate Nassau County",
+    description: "Get a free estimate on roofing, siding, kitchens, bathrooms, pavers & more. Based in Massapequa, NY. Call 516-557-4933.",
+    url: "https://titanprojectsolutions.com/contact",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Contact Titan Project Solutions | Free Estimate Nassau County",
+    description: "Get a free estimate on roofing, siding, kitchens, bathrooms & more. Based in Massapequa, NY. Call 516-557-4933.",
+  },
 };
 
 const contactDetails = [
@@ -73,7 +85,7 @@ export default function ContactPage() {
           </h1>
           <div className="w-16 h-1 bg-[#C9A84C] mx-auto mb-5" />
           <p className="text-gray-400 text-lg">
-            Ready to start your project? Fill out the form below or call us directly. We respond within 24 hours.
+            Ready to start your project? Fill out the form below or call us directly. We typically respond within 24 hours.
           </p>
         </div>
       </section>

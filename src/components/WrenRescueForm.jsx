@@ -63,7 +63,7 @@ export default function WrenRescueForm() {
           We Got You.
         </h3>
         <p className="text-gray-400 mb-4">
-          We&apos;ll call you within 2 hours to schedule your free job site assessment.
+          We&apos;ll typically call you within 2 hours to schedule your free job site assessment.
         </p>
         <p className="text-gray-500 text-sm">
           Need to reach us right now?{" "}
@@ -163,11 +163,15 @@ export default function WrenRescueForm() {
       </button>
 
       <p className="text-gray-600 text-xs text-center">
+        By submitting you consent to receive calls and texts from Titan Project Solutions at the number provided. Msg &amp; data rates may apply. Reply STOP to opt out.
+      </p>
+
+      <p className="text-gray-600 text-xs text-center">
         Or call us directly at{" "}
         <a href="tel:5165574933" className="text-[#C9A84C] hover:text-[#E8C96A]">
           516-557-4933
         </a>
-        . We respond within 2 hours.
+        . We typically respond within 2 hours.
       </p>
     </form>
   );

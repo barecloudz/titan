@@ -385,7 +385,7 @@ export default function WrenKitchensRescuePage() {
             Stuck With an Unfinished Kitchen?
           </h2>
           <p className="text-gray-400 text-center mb-8">
-            Fill out the form below. We&apos;ll call you within 2 hours to schedule your free job site assessment.
+            Fill out the form below. We&apos;ll typically call you within 2 hours to schedule your free job site assessment.
             Financing available through Service Finance — apply in minutes.
           </p>
           <WrenRescueForm />
@@ -450,7 +450,7 @@ export default function WrenKitchensRescuePage() {
             Don&apos;t Stay Stuck. Let&apos;s Finish Your Kitchen.
           </h2>
           <p className="text-black/70 text-lg mb-8">
-            Free job site assessment. No commitment. We show up within 24–48 hours.
+            Free job site assessment. No commitment. We typically show up within 24–48 hours.
           </p>
           <a
             href="tel:5165574933"

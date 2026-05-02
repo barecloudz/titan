@@ -5,6 +5,18 @@ export const metadata = {
   title: "Siding Contractor Nassau County NY | Vinyl & Fiber Cement Siding",
   description:
     "Professional siding installation and replacement in Nassau County. Titan Project Solutions installs vinyl, fiber cement, and composite siding. Licensed & insured. Free estimates. Call 516-557-4933.",
+  alternates: { canonical: "https://titanprojectsolutions.com/services/siding" },
+  openGraph: {
+    title: "Siding Contractor Nassau County NY | Vinyl & Fiber Cement | Titan",
+    description: "Vinyl, fiber cement & composite siding installation in Nassau County. Licensed & insured. Free estimates. Call 516-557-4933.",
+    url: "https://titanprojectsolutions.com/services/siding",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Siding Contractor Nassau County NY | Titan Project Solutions",
+    description: "Vinyl, fiber cement & composite siding installation in Nassau County. Free estimates. Call 516-557-4933.",
+  },
   keywords: [
     "siding contractor Nassau County",
     "vinyl siding installation Long Island",

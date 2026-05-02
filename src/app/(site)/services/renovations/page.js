@@ -5,6 +5,18 @@ export const metadata = {
   title: "Home Renovations Nassau County NY | Titan Project Solutions",
   description:
     "Full-service home renovations, additions, basement finishing, and structural work in Nassau County, NY. Licensed general contractor. Free estimates. Call 516-557-4933.",
+  alternates: { canonical: "https://titanprojectsolutions.com/services/renovations" },
+  openGraph: {
+    title: "Home Renovations Nassau County NY | Titan Project Solutions",
+    description: "Full-service home renovations, additions, basement finishing & structural work in Nassau County. Free estimates. Call 516-557-4933.",
+    url: "https://titanprojectsolutions.com/services/renovations",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Home Renovations Nassau County NY | Titan Project Solutions",
+    description: "Full-service home renovations, additions & basement finishing in Nassau County. Free estimates. Call 516-557-4933.",
+  },
   keywords: [
     "home renovation Nassau County",
     "general contractor Long Island",

@@ -11,6 +11,18 @@ export const metadata = {
     "licensed contractor Nassau County",
     "family owned construction company Long Island",
   ],
+  alternates: { canonical: "https://titanprojectsolutions.com/about" },
+  openGraph: {
+    title: "About Titan Project Solutions | Family-Owned Nassau County Contractor",
+    description: "Family-owned roofing and construction company based in Massapequa, NY. Licensed & insured. Serving Nassau County for over 10 years.",
+    url: "https://titanprojectsolutions.com/about",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "About Titan Project Solutions | Family-Owned Nassau County Contractor",
+    description: "Family-owned roofing and construction company based in Massapequa, NY. Licensed & insured. 10+ years serving Nassau County.",
+  },
 };
 
 const values = [
@@ -28,7 +40,7 @@ const values = [
   },
   {
     title: "We Stand Behind Our Work",
-    desc: "Every project comes with our workmanship guarantee. If something isn't right, we make it right - no excuses, no runaround.",
+    desc: "Every project comes with our workmanship guarantee. If something isn't right, we make it right. That commitment is in writing in every contract we sign.",
   },
 ];
 

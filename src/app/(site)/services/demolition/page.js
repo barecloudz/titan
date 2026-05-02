@@ -5,6 +5,18 @@ export const metadata = {
   title: "Demolition & Clean-outs Nassau County NY | Titan Project Solutions",
   description:
     "Interior demolition, structure teardowns, estate cleanouts, and debris removal across Nassau County, NY. Licensed & insured. Free estimates. Call 516-557-4933.",
+  alternates: { canonical: "https://titanprojectsolutions.com/services/demolition" },
+  openGraph: {
+    title: "Demolition & Clean-outs Nassau County NY | Titan Project Solutions",
+    description: "Interior demolition, structure teardowns, estate cleanouts & debris removal in Nassau County. Licensed & insured. Free estimates. Call 516-557-4933.",
+    url: "https://titanprojectsolutions.com/services/demolition",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Demolition & Clean-outs Nassau County NY | Titan Project Solutions",
+    description: "Interior demolition, estate cleanouts & debris removal in Nassau County. Free estimates. Call 516-557-4933.",
+  },
   keywords: [
     "demolition contractor Nassau County",
     "interior demolition Long Island",

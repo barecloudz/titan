@@ -35,7 +35,7 @@ const pillars = [
   },
   {
     title: "On Time & On Budget",
-    desc: "We show up when we say we will and finish what we start. Our clients consistently rate us 5 stars for professionalism and reliability.",
+    desc: "We show up when we say we will and finish what we start. Professionalism and reliability you can count on.",
     icon: (
       <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
         <circle cx="24" cy="24" r="18" stroke="#C9A84C" strokeWidth="2.5" />

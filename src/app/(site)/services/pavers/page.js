@@ -5,6 +5,18 @@ export const metadata = {
   title: "Pavers & Hardscape Nassau County NY | Titan Project Solutions",
   description:
     "Expert paver installation for driveways, patios, walkways, and retaining walls across Nassau County, NY. Licensed & insured. Free estimates. Call 516-557-4933.",
+  alternates: { canonical: "https://titanprojectsolutions.com/services/pavers" },
+  openGraph: {
+    title: "Pavers & Hardscape Nassau County NY | Titan Project Solutions",
+    description: "Paver driveways, patios, walkways & retaining walls across Nassau County. Licensed & insured. Free estimates. Call 516-557-4933.",
+    url: "https://titanprojectsolutions.com/services/pavers",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Pavers & Hardscape Nassau County NY | Titan Project Solutions",
+    description: "Paver driveways, patios, walkways & retaining walls across Nassau County. Free estimates. Call 516-557-4933.",
+  },
   keywords: [
     "paver installation Nassau County",
     "driveway pavers Long Island",

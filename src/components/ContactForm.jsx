@@ -61,7 +61,7 @@ export default function ContactForm() {
           Message Sent!
         </h3>
         <p className="text-gray-400">
-          Thanks for reaching out. We&apos;ll get back to you within 24 hours to schedule your free estimate.
+          Thanks for reaching out. We&apos;ll typically get back to you within 24 hours to schedule your free estimate.
         </p>
         <p className="mt-4 text-gray-500 text-sm">
           Need immediate assistance?{" "}
@@ -161,11 +161,15 @@ export default function ContactForm() {
       </button>
 
       <p className="text-gray-600 text-xs text-center">
+        By submitting you consent to receive calls and texts from Titan Project Solutions at the number provided. Msg &amp; data rates may apply. Reply STOP to opt out.
+      </p>
+
+      <p className="text-gray-600 text-xs text-center">
         Or call us directly at{" "}
         <a href="tel:5165574933" className="text-[#C9A84C] hover:text-[#E8C96A]">
           516-557-4933
         </a>
-        . We respond within 24 hours.
+        . We aim to respond within 24 hours.
       </p>
     </form>
   );

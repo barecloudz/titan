@@ -5,6 +5,18 @@ export const metadata = {
   title: "Bathroom Remodeling Nassau County NY | Titan Project Solutions",
   description:
     "Expert bathroom renovations in Nassau County. Full gut remodels, tile, vanities, waterproofing, and more. Licensed contractor. Free estimates. Call 516-557-4933.",
+  alternates: { canonical: "https://titanprojectsolutions.com/services/bathrooms" },
+  openGraph: {
+    title: "Bathroom Remodeling Nassau County NY | Titan Project Solutions",
+    description: "Expert bathroom renovations in Nassau County. Full gut remodels, tile, vanities & more. Free estimates. Call 516-557-4933.",
+    url: "https://titanprojectsolutions.com/services/bathrooms",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Bathroom Remodeling Nassau County NY | Titan Project Solutions",
+    description: "Expert bathroom renovations in Nassau County. Full gut remodels, tile, vanities & more. Free estimates. Call 516-557-4933.",
+  },
   keywords: [
     "bathroom remodeling Nassau County",
     "bathroom renovation Long Island",

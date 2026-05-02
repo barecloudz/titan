@@ -119,9 +119,10 @@ export default function Footer() {
           <p className="text-gray-500 text-xs text-center sm:text-left">
             © 2025 Titan Project Solutions. Licensed &amp; Insured. Nassau County, NY.
           </p>
-          <p className="text-gray-600 text-xs">
-            &ldquo;Quality Work. Done Right.&rdquo;
-          </p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="text-gray-600 hover:text-gray-400 text-xs transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="text-gray-600 hover:text-gray-400 text-xs transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>

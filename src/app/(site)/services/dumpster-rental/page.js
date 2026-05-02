@@ -5,6 +5,18 @@ export const metadata = {
   title: "Dumpster Rental Nassau County NY | 10-40 Yard | Titan Project Solutions",
   description:
     "Fast, affordable dumpster rental in Nassau County. 10, 20, 30, and 40-yard dumpsters delivered to your door. Call Titan Project Solutions at 516-557-4933.",
+  alternates: { canonical: "https://titanprojectsolutions.com/services/dumpster-rental" },
+  openGraph: {
+    title: "Dumpster Rental Nassau County NY | 10-40 Yard | Titan Project Solutions",
+    description: "Fast, affordable 10-40 yard dumpster rental in Nassau County. Delivered to your door. Call Titan Project Solutions at 516-557-4933.",
+    url: "https://titanprojectsolutions.com/services/dumpster-rental",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Dumpster Rental Nassau County NY | Titan Project Solutions",
+    description: "Fast, affordable 10-40 yard dumpster rental in Nassau County. Call 516-557-4933.",
+  },
   keywords: [
     "dumpster rental Nassau County",
     "dumpster rental Long Island",

@@ -12,6 +12,18 @@ export const metadata = {
     "custom kitchen cabinets Nassau County",
     "kitchen gut renovation Long Island",
   ],
+  alternates: { canonical: "https://titanprojectsolutions.com/services/kitchens" },
+  openGraph: {
+    title: "Kitchen Remodeling Nassau County NY | Titan Project Solutions",
+    description: "Custom kitchen remodeling in Nassau County. Full gut renovations, cabinetry, countertops & more. Free estimates. Call 516-557-4933.",
+    url: "https://titanprojectsolutions.com/services/kitchens",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Kitchen Remodeling Nassau County NY | Titan Project Solutions",
+    description: "Custom kitchen remodeling in Nassau County. Full gut renovations, cabinetry, countertops & more. Free estimates. Call 516-557-4933.",
+  },
 };
 
 const kitchenServices = [
